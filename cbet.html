@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scommesse Serie A - 22ª Giornata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #003366; /* Blu scuro */
+            background-color: #FFCC00; /* Giallo */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #003366; /* Blu scuro */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="number"] {
+            padding: 5px;
+            width: 80px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #FFCC00; /* Giallo */
+            color: #003366; /* Blu scuro */
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #FF9900; /* Giallo scuro */
+        }
+        p {
+            font-size: 18px;
+            color: #003366; /* Blu scuro */
+        }
+        /* Stile per il testo "CBET" */
+        .cbet-text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cbet-text .blue { color: #003366; } /* Blu */
+        .cbet-text .yellow { color: #FFCC00; } /* Giallo */
+    </style>
+</head>
+<body>
+
+    <h1>Serie A - 22ª Giornata: Scommetti sulle Partite</h1>
+
+    <!-- Testo "CBET" con la C blu e BET in giallo -->
+    <div class="cbet-text">
+        <span class="blue">C</span><span class="yellow">BET</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Partita</th>
+                <th>Vittoria Casa</th>
+                <th>Pareggio</th>
+                <th>Vittoria Fuori Casa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Partita 1 -->
+            <tr>
+                <td>Torino vs Cagliari - Sabato 25 Gennaio 2025 - 15:00</td>
+                <td>
+                    <input type="radio" name="torino-cagliari" value="2.10" onclick="calcolaQuotaTotale()" /> 2.10
+                </td>
+                <td>
+                    <input type="radio" name="torino-cagliari" value="3.30" onclick="calcolaQuotaTotale()" /> 3.30
+                </td>
+                <td>
+                    <input type="radio" name="torino-cagliari" value="3.80" onclick="calcolaQuotaTotale()" /> 3.80
+                </td>
+            </tr>
+            <!-- Partita 2 -->
+            <tr>
+                <td>Como vs Atalanta - Sabato 25 Gennaio 2025 - 18:00</td>
+                <td>
+                    <input type="radio" name="como-atalanta" value="3.00" onclick="calcolaQuotaTotale()" /> 3.00
+                </td>
+                <td>
+                    <input type="radio" name="como-atalanta" value="3.20" onclick="calcolaQuotaTotale()" /> 3.20
+                </td>
+                <td>
+                    <input type="radio" name="como-atalanta" value="2.40" onclick="calcolaQuotaTotale()" /> 2.40
+                </td>
+            </tr>
+            <!-- Partita 3 -->
+            <tr>
+                <td>Napoli vs Juventus - Sabato 25 Gennaio 2025 - 20:45</td>
+                <td>
+                    <input type="radio" name="napoli-juventus" value="1.80" onclick="calcolaQuotaTotale()" /> 1.80
+                </td>
+                <td>
+                    <input type="radio" name="napoli-juventus" value="3.60" onclick="calcolaQuotaTotale()" /> 3.60
+                </td>
+                <td>
+                    <input type="radio" name="napoli-juventus" value="4.20" onclick="calcolaQuotaTotale()" /> 4.20
+                </td>
+            </tr>
+            <!-- Partita 4 -->
+            <tr>
+                <td>Empoli vs Bologna - Domenica 26 Gennaio 2025 - 12:30</td>
+                <td>
+                    <input type="radio" name="empoli-bologna" value="2.40" onclick="calcolaQuotaTotale()" /> 2.40
+                </td>
+                <td>
+                    <input type="radio" name="empoli-bologna" value="3.30" onclick="calcolaQuotaTotale()" /> 3.30
+                </td>
+                <td>
+                    <input type="radio" name="empoli-bologna" value="3.80" onclick="calcolaQuotaTotale()" /> 3.80
+                </td>
+            </tr>
+            <!-- Partita 5 -->
+            <tr>
+                <td>Milan vs Parma - Domenica 26 Gennaio 2025 - 15:00</td>
+                <td>
+                    <input type="radio" name="milan-parma" value="1.70" onclick="calcolaQuotaTotale()" /> 1.70
+                </td>
+                <td>
+                    <input type="radio" name="milan-parma" value="3.50" onclick="calcolaQuotaTotale()" /> 3.50
+                </td>
+                <td>
+                    <input type="radio" name="milan-parma" value="5.00" onclick="calcolaQuotaTotale()" /> 5.00
+                </td>
+            </tr>
+            <!-- Partita 6 -->
+            <tr>
+                <td>Udinese vs Roma - Domenica 26 Gennaio 2025 - 18:00</td>
+                <td>
+                    <input type="radio" name="udinese-roma" value="2.20" onclick="calcolaQuotaTotale()" /> 2.20
+                </td>
+                <td>
+                    <input type="radio" name="udinese-roma" value="3.10" onclick="calcolaQuotaTotale()" /> 3.10
+                </td>
+                <td>
+                    <input type="radio" name="udinese-roma" value="3.60" onclick="calcolaQuotaTotale()" /> 3.60
+                </td>
+            </tr>
+            <!-- Partita 7 -->
+            <tr>
+                <td>Lecce vs Inter - Domenica 26 Gennaio 2025 - 20:45</td>
+                <td>
+                    <input type="radio" name="lecce-inter" value="3.40" onclick="calcolaQuotaTotale()" /> 3.40
+                </td>
+                <td>
+                    <input type="radio" name="lecce-inter" value="3.30" onclick="calcolaQuotaTotale()" /> 3.30
+                </td>
+                <td>
+                    <input type="radio" name="lecce-inter" value="2.20" onclick="calcolaQuotaTotale()" /> 2.20
+                </td>
+            </tr>
+            <!-- Partita 8 -->
+            <tr>
+                <td>Lazio vs Fiorentina - Lunedì 27 Gennaio 2025 - 18:30</td>
+                <td>
+                    <input type="radio" name="lazio-fiorentina" value="2.10" onclick="calcolaQuotaTotale()" /> 2.10
+                </td>
+                <td>
+                    <input type="radio" name="lazio-fiorentina" value="3.40" onclick="calcolaQuotaTotale()" /> 3.40
+                </td>
+                <td>
+                    <input type="radio" name="lazio-fiorentina" value="3.80" onclick="calcolaQuotaTotale()" /> 3.80
+                </td>
+            </tr>
+            <!-- Partita 9 -->
+            <tr>
+                <td>Venezia vs Verona - Lunedì 27 Gennaio 2025 - 18:30</td>
+                <td>
+                    <input type="radio" name="venezia-verona" value="2.30" onclick="calcolaQuotaTotale()" /> 2.30
+                </td>
+                <td>
+                    <input type="radio" name="venezia-verona" value="3.20" onclick="calcolaQuotaTotale()" /> 3.20
+                </td>
+                <td>
+                    <input type="radio" name="venezia-verona" value="3.50" onclick="calcolaQuotaTotale()" /> 3.50
+                </td>
+            </tr>
+            <!-- Partita 10 -->
+            <tr>
+                <td>Genoa vs Monza - Lunedì 27 Gennaio 2025 - 18:30</td>
+                <td>
+                    <input type="radio" name="genoa-monza" value="2.10" onclick="calcolaQuotaTotale()" /> 2.10
+                </td>
+                <td>
+                    <input type="radio" name="genoa-monza" value="3.20" onclick="calcolaQuotaTotale()" /> 3.20
+                </td>
+                <td>
+                    <input type="radio" name="genoa-monza" value="3.60" onclick="calcolaQuotaTotale()" /> 3.60
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="form-container">
+        <label for="importo">Importo scommesso (Euro): </label>
+        <input type="number" id="importo" placeholder="€" min="1" onchange="calcolaQuotaTotale()" />
+        <p id="quota-totale">Quota Totale: 1.00</p> <!-- Mostriamo la quota totale -->
+        <p id="vincita">Vincita Potenziale: €0.00</p> <!-- Vincita iniziale -->
+    </div>
+
+    <!-- Tasto "Scommetti" che porta alla pagina di registrazione -->
+    <div class="form-container">
+        <a href="https://www.goldbet.it/area-personale/registrati/codice-fiscale" target="_blank">
+            <button>Scommetti</button>
+        </a>
+    </div>
+
+    <script>
+        function calcolaQuotaTotale() {
+            let quotaTotale = 1.00; // Partiamo da una quota di 1 per la moltiplicazione
+
+            // Otteniamo l'importo scommesso
+            const importo = parseFloat(document.getElementById('importo').value) || 0;
+
+            // Lista delle partite
+            const partite = [
+                'torino-cagliari', 'como-atalanta', 'napoli-juventus', 'empoli-bologna', 
+                'milan-parma', 'udinese-roma', 'lecce-inter', 'lazio-fiorentina', 
+                'venezia-verona', 'genoa-monza'
+            ];
+
+            partite.forEach(partita => {
+                const quotaSelezionata = document.querySelector(`input[name="${partita}"]:checked`);
+
+                // Se c'è una quota selezionata, moltiplichiamo la quota totale
+                if (quotaSelezionata) {
+                    quotaTotale *= parseFloat(quotaSelezionata.value);
+                }
+            });
+
+            // Mostriamo la quota totale aggiornata
+            document.getElementById('quota-totale').innerText = `Quota Totale: ${quotaTotale.toFixed(2)}`;
+
+            // Calcoliamo la vincita potenziale
+            const vincita = (quotaTotale * importo).toFixed(2);
+
+            // Mostriamo la vincita potenziale
+            document.getElementById('vincita').innerText = `Vincita Potenziale: €${vincita}`;
+        }
+    </script>
+
+</body>
+</html>
+
+
+
